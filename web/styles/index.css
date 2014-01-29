@@ -25,7 +25,7 @@ body {
   left: 50%;
   border: 2px dotted white;
   border-radius: 50%; }
-  .orbit div {
+  .orbit .planet {
     position: absolute;
     border-radius: 50%;
     left: 50%;
@@ -40,12 +40,12 @@ body {
   -moz-animation: spin-right 2s linear infinite;
   -ms-animation: spin-right 2s linear infinite;
   animation: spin-right 2s linear infinite; }
-  #mercury div {
+  #mercury .planet {
     background-color: grey;
     border: 1px solid gray;
     height: 10px;
     width: 10px;
-    margin: -10px 0px 0px -10px; }
+    margin: -5px 0px 0px -5px; }
 
 #venus {
   width: 400px;
@@ -56,12 +56,12 @@ body {
   -moz-animation: spin-right 4s linear infinite;
   -ms-animation: spin-right 4s linear infinite;
   animation: spin-right 4s linear infinite; }
-  #venus div {
+  #venus .planet {
     background-color: orange;
     border: 1px solid red;
     height: 25px;
     width: 25px;
-    margin: -20px 0px 0px -20px; }
+    margin: -12.5px 0px 0px -12.5px; }
 
 #earth {
   width: 500px;
@@ -72,12 +72,12 @@ body {
   -moz-animation: spin-right 6s linear infinite;
   -ms-animation: spin-right 6s linear infinite;
   animation: spin-right 6s linear infinite; }
-  #earth div {
+  #earth .planet {
     background-color: blue;
     border: 1px solid green;
     height: 30px;
     width: 30px;
-    margin: -20px 0px 0px -20px; }
+    margin: -15px 0px 0px -15px; }
 
 #mars {
   width: 600px;
@@ -88,12 +88,12 @@ body {
   -moz-animation: spin-right 8s linear infinite;
   -ms-animation: spin-right 8s linear infinite;
   animation: spin-right 8s linear infinite; }
-  #mars div {
+  #mars .planet {
     background-color: red;
     border: 1px solid orange;
     height: 15px;
     width: 15px;
-    margin: -10px 0px 0px -10px; }
+    margin: -7.5px 0px 0px -7.5px; }
 
 #jupiter {
   width: 800px;
@@ -104,12 +104,11 @@ body {
   -moz-animation: spin-right 12s linear infinite;
   -ms-animation: spin-right 12s linear infinite;
   animation: spin-right 12s linear infinite; }
-  #jupiter div {
+  #jupiter .planet {
     background-color: orange;
-    border: 1px solid white;
     height: 50px;
     width: 50px;
-    margin: -10px 0px 0px -10px; }
+    margin: -25px 0px 0px -25px; }
 
 #saturn {
   width: 900px;
@@ -120,12 +119,18 @@ body {
   -moz-animation: spin-right 14s linear infinite;
   -ms-animation: spin-right 14s linear infinite;
   animation: spin-right 14s linear infinite; }
-  #saturn div {
-    background-color: tan;
+  #saturn .planet {
     border: 1px solid white;
+    background-color: tan;
     height: 30px;
     width: 30px;
-    margin: -10px 0px 0px -10px; }
+    margin: -15px 0px 0px -15px; }
+  #saturn .ring {
+    border: 5px solid #B0C4DE;
+    border-radius: 50%;
+    margin: -10px 0px 0px -10px;
+    height: 40px;
+    width: 40px; }
 
 #uranus {
   width: 1000px;
@@ -136,12 +141,12 @@ body {
   -moz-animation: spin-right 16s linear infinite;
   -ms-animation: spin-right 16s linear infinite;
   animation: spin-right 16s linear infinite; }
-  #uranus div {
+  #uranus .planet {
     background-color: darkblue;
     border: 1px solid white;
     height: 30px;
     width: 30px;
-    margin: -10px 0px 0px -10px; }
+    margin: -15px 0px 0px -15px; }
 
 #neptune {
   width: 1200px;
@@ -152,12 +157,12 @@ body {
   -moz-animation: spin-right 18s linear infinite;
   -ms-animation: spin-right 18s linear infinite;
   animation: spin-right 18s linear infinite; }
-  #neptune div {
+  #neptune .planet {
     background-color: cyan;
     border: 1px solid white;
     height: 30px;
     width: 30px;
-    margin: -10px 0px 0px -10px; }
+    margin: -15px 0px 0px -15px; }
 
 @-webkit-keyframes spin-right {
   100% {
