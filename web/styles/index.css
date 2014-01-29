@@ -1,0 +1,174 @@
+body {
+  background-color: black; }
+
+#sun {
+  position: absolute;
+  /* Positions the top-left corner of the image to be *
+  /* in the middle of the box */
+  top: 50%;
+  left: 50%;
+  /* Play with these numbers to see what it does */
+  height: 200px;
+  width: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  background-color: yellow;
+  border-color: orange;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 50%;
+  box-shadow: 0px 0 500px 10px red; }
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 2px dotted white;
+  border-radius: 50%; }
+  .orbit div {
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 0px; }
+
+#mercury {
+  width: 300px;
+  height: 300px;
+  margin-top: -150px;
+  margin-left: -150px;
+  -webkit-animation: spin-right 2s linear infinite;
+  -moz-animation: spin-right 2s linear infinite;
+  -ms-animation: spin-right 2s linear infinite;
+  animation: spin-right 2s linear infinite; }
+  #mercury div {
+    background-color: grey;
+    border: 1px solid gray;
+    height: 10px;
+    width: 10px;
+    margin: -10px 0px 0px -10px; }
+
+#venus {
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  -webkit-animation: spin-right 4s linear infinite;
+  -moz-animation: spin-right 4s linear infinite;
+  -ms-animation: spin-right 4s linear infinite;
+  animation: spin-right 4s linear infinite; }
+  #venus div {
+    background-color: orange;
+    border: 1px solid red;
+    height: 25px;
+    width: 25px;
+    margin: -20px 0px 0px -20px; }
+
+#earth {
+  width: 500px;
+  height: 500px;
+  margin-top: -250px;
+  margin-left: -250px;
+  -webkit-animation: spin-right 6s linear infinite;
+  -moz-animation: spin-right 6s linear infinite;
+  -ms-animation: spin-right 6s linear infinite;
+  animation: spin-right 6s linear infinite; }
+  #earth div {
+    background-color: blue;
+    border: 1px solid green;
+    height: 30px;
+    width: 30px;
+    margin: -20px 0px 0px -20px; }
+
+#mars {
+  width: 600px;
+  height: 600px;
+  margin-top: -300px;
+  margin-left: -300px;
+  -webkit-animation: spin-right 8s linear infinite;
+  -moz-animation: spin-right 8s linear infinite;
+  -ms-animation: spin-right 8s linear infinite;
+  animation: spin-right 8s linear infinite; }
+  #mars div {
+    background-color: red;
+    border: 1px solid orange;
+    height: 15px;
+    width: 15px;
+    margin: -10px 0px 0px -10px; }
+
+#jupiter {
+  width: 800px;
+  height: 800px;
+  margin-top: -400px;
+  margin-left: -400px;
+  -webkit-animation: spin-right 12s linear infinite;
+  -moz-animation: spin-right 12s linear infinite;
+  -ms-animation: spin-right 12s linear infinite;
+  animation: spin-right 12s linear infinite; }
+  #jupiter div {
+    background-color: orange;
+    border: 1px solid white;
+    height: 50px;
+    width: 50px;
+    margin: -10px 0px 0px -10px; }
+
+#saturn {
+  width: 900px;
+  height: 900px;
+  margin-top: -450px;
+  margin-left: -450px;
+  -webkit-animation: spin-right 14s linear infinite;
+  -moz-animation: spin-right 14s linear infinite;
+  -ms-animation: spin-right 14s linear infinite;
+  animation: spin-right 14s linear infinite; }
+  #saturn div {
+    background-color: tan;
+    border: 1px solid white;
+    height: 30px;
+    width: 30px;
+    margin: -10px 0px 0px -10px; }
+
+#uranus {
+  width: 1000px;
+  height: 1000px;
+  margin-top: -500px;
+  margin-left: -500px;
+  -webkit-animation: spin-right 16s linear infinite;
+  -moz-animation: spin-right 16s linear infinite;
+  -ms-animation: spin-right 16s linear infinite;
+  animation: spin-right 16s linear infinite; }
+  #uranus div {
+    background-color: darkblue;
+    border: 1px solid white;
+    height: 30px;
+    width: 30px;
+    margin: -10px 0px 0px -10px; }
+
+#neptune {
+  width: 1200px;
+  height: 1200px;
+  margin-top: -600px;
+  margin-left: -600px;
+  -webkit-animation: spin-right 18s linear infinite;
+  -moz-animation: spin-right 18s linear infinite;
+  -ms-animation: spin-right 18s linear infinite;
+  animation: spin-right 18s linear infinite; }
+  #neptune div {
+    background-color: cyan;
+    border: 1px solid white;
+    height: 30px;
+    width: 30px;
+    margin: -10px 0px 0px -10px; }
+
+@-webkit-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
