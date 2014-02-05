@@ -42,10 +42,10 @@ body{
     left: 50%;
     
     /* Play with these numbers to see what it does */
-    height: 200px;
-    width: 200px;
-    margin-top: -100px; 
-    margin-left: -100px;
+    height: 100px;
+    width: 100px;
+    margin-top: -50px; 
+    margin-left: -50px;
     background-color:yellow;
     border-color:orange;
     border-width:4px;
@@ -60,7 +60,7 @@ body{
     position: absolute;
     top:50%;
     left:50%;
-    border: 2px dotted white;
+    /*border: 1px dotted white; */
     border-radius:50%;
     
     .moon, .planet{
@@ -77,25 +77,51 @@ body{
     .moon{
         background-color:grey;
         border:1px solid gray;
-        @include planet-size(10px);
+        @include planet-size(8px);
+        
+        /*-webkit-animation: rotate-right-moon 6s linear infinite;
+        -moz-animation: rotate-right-moon 6s linear infinite;
+        -ms-animation: rotate-right-moon 6s linear infinite;
+        animation: rotate-right-moon 6s linear infinite;
 
+        background: linear-gradient(to top, grey 0%, black 100%); */
     }
     
 }
+#phobos{
+    @include moon-orbit(25px );
+    @include orbit-rate(2s);
+    .moon{
+        background-color:grey;
+        border:1px solid gray;
+        @include planet-size(5px);
+    }
+ }
 
+ #deimos{
+    @include moon-orbit(40px );
+    @include orbit-rate(4s);
+    .moon{
+        background-color:grey;
+        border:1px solid gray;
+        @include planet-size(3px);
+    }
+
+ }
+ 
 #mercury{
-    @include planet-orbit(300px );
+    @include planet-orbit(200px );
     @include orbit-rate(2s);
     
     .planet{
         @include planet-color(grey, grey);
         @include planet-size(10px);
-
+        animation: rotate-right-moon
     }
 }
 
 #venus{
-    @include planet-orbit(400px);
+    @include planet-orbit(250px);
     @include orbit-rate(4s);
     
     .planet{
@@ -105,7 +131,7 @@ body{
 }
 
 #earth{
-    @include planet-orbit(500px);
+    @include planet-orbit(350px);
     @include orbit-rate(6s);
 
     .planet{ 
@@ -116,7 +142,7 @@ body{
 }
 
 #mars{
-    @include planet-orbit(600px);
+    @include planet-orbit(450px);
     @include orbit-rate(8s);
 
     .planet{
@@ -127,7 +153,8 @@ body{
 }
 
 #jupiter{
-    @include planet-orbit(800px);
+    $size: 50px;
+    @include planet-orbit(700px);
     @include orbit-rate(12s);
 
     .planet{
@@ -135,7 +162,52 @@ body{
         @include planet-size(50px);
     }
 
+    .ring{
+        border:1px solid #B0C4DE;
+        border-radius:50%;
+        margin: -6px 0px 0px -6px;
+        height: $size + 10px;
+        width: $size + 10px;
+    }
+    
+    #io{
+        @include moon-orbit($size + 20px );
+        @include orbit-rate(2s);
+        .moon{
+            background-color:gold;
+            border:1px solid gray;
+            @include planet-size(3px);
+        }
+     }
+    #europa{
+        @include moon-orbit($size + 30px );
+        @include orbit-rate(3s);
+        .moon{
+            background-color:brown;
+            border:1px solid gray;
+            @include planet-size(3px);
+        }
+     }
+     #ganymeade{
+        @include moon-orbit($size + 40px );
+        @include orbit-rate(4s);
+        .moon{
+            background-color:gray;
+            border:1px solid gray;
+            @include planet-size(5px);
+        }
+     }
+     #callisto{
+        @include moon-orbit($size + 50px );
+        @include orbit-rate(5s);
+        .moon{
+            background-color:gray;
+            border:1px solid gray;
+            @include planet-size(4px);
+        }
+     }
 }
+
 #saturn{
     $size: 30px;
     @include planet-orbit(900px);
@@ -194,4 +266,19 @@ body{
         -ms-transform: rotate(360deg);
         transform:rotate(360deg);
     }
+}
+
+@keyframes rotate-right-moon{
+   0% { background: linear-gradient(to top, grey 0%, black 100%); }
+  25% { background: linear-gradient(to right, grey 0%, black 100%); }
+  50% { background: linear-gradient(to bottom, grey 0%, black 100%); }
+  75% { background: linear-gradient(to left, grey 0%, black 100%); }
+  100% { background: linear-gradient(to top, grey 0%, black 100%); }
+}
+@-webkit-keyframes rotate-right-moon{
+   0% { background: linear-gradient(to top, grey 0%, black 100%); }
+  25% { background: linear-gradient(to right, grey 0%, black 100%); }
+  50% { background: linear-gradient(to bottom, grey 0%, black 100%); }
+  75% { background: linear-gradient(to left, grey 0%, black 100%); }
+  100% { background: linear-gradient(to top, grey 0%, black 100%); }
 }
