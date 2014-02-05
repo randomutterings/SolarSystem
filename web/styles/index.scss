@@ -27,6 +27,12 @@ body{
     animation: spin-right $speed linear infinite;
 }
 
+@mixin planet-color($color, $borderColor){
+    background-color:$color;
+    background: linear-gradient(to top, $color 0%, black 100%);
+    border:1px solid $borderColor;
+}
+
 
 #sun{
     position: absolute;
@@ -82,8 +88,7 @@ body{
     @include orbit-rate(2s);
     
     .planet{
-        background-color:grey;
-        border:1px solid gray;
+        @include planet-color(grey, grey);
         @include planet-size(10px);
 
     }
@@ -94,8 +99,7 @@ body{
     @include orbit-rate(4s);
     
     .planet{
-        background-color:orange;
-        border:1px solid red;
+        @include planet-color(orange, red);
         @include planet-size(25px);
     }
 }
@@ -105,8 +109,7 @@ body{
     @include orbit-rate(6s);
 
     .planet{ 
-        background-color:blue;
-        border:1px solid green;
+        @include planet-color(blue, green);
         @include planet-size(30px);
     }
 
@@ -117,8 +120,7 @@ body{
     @include orbit-rate(8s);
 
     .planet{
-        background-color:red;
-        border:1px solid orange;
+        @include planet-color(red, orange);
         @include planet-size(15px);
     }
 
@@ -129,7 +131,7 @@ body{
     @include orbit-rate(12s);
 
     .planet{
-        background-color:orange;
+        @include planet-color(orange, tan);
         @include planet-size(50px);
     }
 
@@ -140,9 +142,7 @@ body{
     @include orbit-rate(14s);
    
    .planet{
-        border:1px solid white;
-        background-color:tan;
- 
+        @include planet-color(tan, white);
         @include planet-size($size);
     }
     
@@ -161,8 +161,7 @@ body{
     @include orbit-rate(16s);
 
     .planet{
-        background-color:darkblue;
-        border:1px solid white;
+        @include planet-color(cyan, white);
         @include planet-size(30px);
     }
 
@@ -172,8 +171,7 @@ body{
     @include orbit-rate(18s);
 
     .planet{
-        background-color:cyan;
-        border:1px solid white;
+        @include planet-color(darkBlue, white);
         @include planet-size(30px);
     }
 

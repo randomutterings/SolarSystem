@@ -58,7 +58,8 @@ body {
   animation: spin-right 2s linear infinite; }
   #mercury .planet {
     background-color: grey;
-    border: 1px solid gray;
+    background: linear-gradient(to top, grey 0%, black 100%);
+    border: 1px solid grey;
     height: 10px;
     width: 10px;
     margin: -5px 0px 0px -5px; }
@@ -74,6 +75,7 @@ body {
   animation: spin-right 4s linear infinite; }
   #venus .planet {
     background-color: orange;
+    background: linear-gradient(to top, orange 0%, black 100%);
     border: 1px solid red;
     height: 25px;
     width: 25px;
@@ -90,6 +92,7 @@ body {
   animation: spin-right 6s linear infinite; }
   #earth .planet {
     background-color: blue;
+    background: linear-gradient(to top, blue 0%, black 100%);
     border: 1px solid green;
     height: 30px;
     width: 30px;
@@ -106,6 +109,7 @@ body {
   animation: spin-right 8s linear infinite; }
   #mars .planet {
     background-color: red;
+    background: linear-gradient(to top, red 0%, black 100%);
     border: 1px solid orange;
     height: 15px;
     width: 15px;
@@ -122,6 +126,8 @@ body {
   animation: spin-right 12s linear infinite; }
   #jupiter .planet {
     background-color: orange;
+    background: linear-gradient(to top, orange 0%, black 100%);
+    border: 1px solid tan;
     height: 50px;
     width: 50px;
     margin: -25px 0px 0px -25px; }
@@ -136,8 +142,9 @@ body {
   -ms-animation: spin-right 14s linear infinite;
   animation: spin-right 14s linear infinite; }
   #saturn .planet {
-    border: 1px solid white;
     background-color: tan;
+    background: linear-gradient(to top, tan 0%, black 100%);
+    border: 1px solid white;
     height: 30px;
     width: 30px;
     margin: -15px 0px 0px -15px; }
@@ -158,7 +165,8 @@ body {
   -ms-animation: spin-right 16s linear infinite;
   animation: spin-right 16s linear infinite; }
   #uranus .planet {
-    background-color: darkblue;
+    background-color: cyan;
+    background: linear-gradient(to top, cyan 0%, black 100%);
     border: 1px solid white;
     height: 30px;
     width: 30px;
@@ -174,7 +182,8 @@ body {
   -ms-animation: spin-right 18s linear infinite;
   animation: spin-right 18s linear infinite; }
   #neptune .planet {
-    background-color: cyan;
+    background-color: darkblue;
+    background: linear-gradient(to top, darkblue 0%, black 100%);
     border: 1px solid white;
     height: 30px;
     width: 30px;
