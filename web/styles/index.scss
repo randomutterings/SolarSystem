@@ -54,6 +54,10 @@ body{
     
     box-shadow: 0px 0 500px 10px red;
 }
+.ring{
+    position: absolute;
+    border-radius:50%;
+}
 
 .orbit
 {
@@ -164,7 +168,6 @@ body{
 
     .ring{
         border:1px solid #B0C4DE;
-        border-radius:50%;
         margin: -6px 0px 0px -6px;
         height: $size + 10px;
         width: $size + 10px;
@@ -218,23 +221,78 @@ body{
         @include planet-size($size);
     }
     
-    .ring{
-        border:5px solid #B0C4DE;
-        border-radius:50%;
-        margin: -10px 0px 0px -10px;
+    .ring:first-child{
+        border:4px solid #B0C4DE;
+        margin: -8px 0px 0px -8px;
         height: $size + 10px;
         width: $size + 10px;
     }
+    .ring:nth-child(2){
+        border:2px solid #B0C4DE;
+        margin: -12px 0px 0px -12px;
+        height: $size + 20px;
+        width: $size + 20px;
+    }
+    
+    #titan{
+        @include moon-orbit($size + 35px );
+        @include orbit-rate(3s);
+        .moon{
+            background-color:orange;
+            border:1px solid yellow;
+            @include planet-size(5px);
+        }
+    }
+    
+    #hyperion{
+        @include moon-orbit($size + 45px );
+        @include orbit-rate(4s);
+        .moon{
+            background-color:grey;
+            border:1px solid grey;
+            @include planet-size(1px);
+        }
+    }
+    
+    #iapetus{
+        @include moon-orbit($size + 50px );
+        @include orbit-rate(5s);
+        .moon{
+            background-color:white;
+            border:1px solid silver;
+            @include planet-size(3px);
+        }
+    }
+    #phoebe{
+        @include moon-orbit($size + 53px );
+        @include orbit-rate(5s);
+        .moon{
+            background-color:grey;
+            border:1px solid grey;
+            @include planet-size(1px);
+        }
+    }
+    
 
 }
 
 #uranus{
+    $size : 30px;
     @include planet-orbit(1000px);
     @include orbit-rate(16s);
 
+    .ring{
+        margin: 10px 0px 0px -8px;
+        height: 10px;
+        width: $size + 20px;
+        border-top:2px solid #B0C4DE;
+        border-left:2px solid #B0C4DE;
+        border-right:2px solid #B0C4DE;
+    }
     .planet{
         @include planet-color(cyan, white);
-        @include planet-size(30px);
+        @include planet-size($size);
+        
     }
 
 }
@@ -246,6 +304,8 @@ body{
         @include planet-color(darkBlue, white);
         @include planet-size(30px);
     }
+    
+    
 
 }
 
